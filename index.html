@@ -1,0 +1,1300 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тактичні рукавички - Найкращий захист для ваших рук</title>
+	<meta name="description" content="Кожна пара рукавичок проходить суворий контроль якості перед відправкою клієнту.">
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2B5D34',secondary:'#D4A24C'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .timer-block {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        .timer-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .custom-checkbox {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+        .custom-checkbox:hover input ~ .checkmark {
+            background-color: #f3f4f6;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #2B5D34;
+            border-color: #2B5D34;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .custom-radio {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .custom-radio input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .radio-mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 50%;
+        }
+        .custom-radio:hover input ~ .radio-mark {
+            background-color: #f3f4f6;
+        }
+        .custom-radio input:checked ~ .radio-mark {
+            background-color: #2B5D34;
+            border-color: #2B5D34;
+        }
+        .radio-mark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-radio input:checked ~ .radio-mark:after {
+            display: block;
+        }
+        .custom-radio .radio-mark:after {
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+        .custom-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .custom-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2B5D34;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+        }
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2B5D34;
+            cursor: pointer;
+        }
+        .range-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2B5D34;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-['Pacifico'] text-primary">logo</h1>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex flex-col items-end">
+                    <a href="tel:+380991234567" class="text-lg font-semibold hover:text-primary transition">+38 (099) 123-45-67</a>
+                    <span class="text-sm text-gray-500">Працюємо з 9:00 до 21:00</span>
+                </div>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition whitespace-nowrap">
+                    Замовити дзвінок
+                </button>
+            </div>
+            
+            <div class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+                <i class="ri-menu-line ri-2x"></i>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden bg-white w-full py-4 px-4 shadow-lg absolute top-full left-0" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="tel:+380991234567" class="text-lg font-semibold">+38 (099) 123-45-67</a>
+                <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition whitespace-nowrap w-full">
+                    Замовити дзвінок
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=tactical%20military%20gloves%20on%20a%20dark%20background%20with%20camouflage%20pattern%2C%20high-quality%20premium%20gloves%20for%20military%20and%20outdoor%20activities%2C%20professional%20photography%20with%20dramatic%20lighting%2C%20showing%20texture%20and%20details%20of%20the%20gloves%2C%20military%20aesthetic&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;" class="w-full h-[600px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Тактичні рукавички преміум-класу</h1>
+                    <p class="text-xl mb-6">Надійний захист та комфорт у будь-яких умовах. Ідеальні для військових, тактичних тренувань та активного відпочинку.</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary rounded-full">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span>Посилений захист суглобів</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary rounded-full">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span>Тактильна чутливість для точної роботи</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 bg-primary rounded-full">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span>Зносостійкі матеріали військового класу</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button text-lg font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
+                            Замовити зараз
+                        </button>
+                        <div class="timer-block px-4 py-3 !rounded-button">
+                            <p class="text-sm mb-1">До кінця акції залишилось:</p>
+                            <div class="flex space-x-2">
+                                <div class="timer-item w-12 h-12 flex flex-col items-center justify-center !rounded-button">
+                                    <span class="text-lg font-bold" id="hours">12</span>
+                                    <span class="text-xs">годин</span>
+                                </div>
+                                <div class="timer-item w-12 h-12 flex flex-col items-center justify-center !rounded-button">
+                                    <span class="text-lg font-bold" id="minutes">34</span>
+                                    <span class="text-xs">хвилин</span>
+                                </div>
+                                <div class="timer-item w-12 h-12 flex flex-col items-center justify-center !rounded-button">
+                                    <span class="text-lg font-bold" id="seconds">56</span>
+                                    <span class="text-xs">секунд</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Переваги наших тактичних рукавичок</h2>
+			<p><a href="https://messer.com.ua/odyag/rukavychky/">Тактичні рукавиці</a> &mdash; це не просто елемент екіпірування солдатів чи спецпідрозділів. Це універсальний аксесуар, який стане в пригоді як під час професійної діяльності, так і в повсякденному житті. Чи то активний відпочинок на свіжому повітрі, стрільба, робота з інструментами чи навіть їзда на велосипеді &mdash; тактичні рукавички незамінні завдяки своїм унікальним конструкційним особливостям. У цій статті ми розглянемо основні властивості, варіанти, відмінності та переваги цих рукавичок, щоб ви могли зробити правильний вибір.</p>
+
+<hr />
+<h4>Що таке тактичні рукавички?</h4>
+
+<p>Назва &laquo;<a href="https://messer.com.ua/odyag/rukavychky/">тактичні рукавички</a>&raquo; говорить сама за себе. Ці рукавички розроблені, щоб забезпечити захист, комфорт і маневреність у найскладніших умовах. Вони створені з урахуванням потреб військових, мисливців, поліцейських, рятувальників та інших професіоналів, яким потрібне поєднання міцності, функціональності та зручності. Останнім часом такі рукавички стали популярними й серед цивільних, адже їхні універсальні властивості роблять їх ідеальними для широкого спектра завдань.</p>
+
+<hr />
+<h4>Ключові особливості тактичних рукавичок</h4>
+
+<ol>
+	<li>
+	<p>Захист фаланг пальців<br />
+	Однією з основних функцій тактичних рукавичок є захист рук від механічних пошкоджень. Спеціальні підсилення на фалангах пальців гарантують безпеку навіть в екстремальних умовах.</p>
+	</li>
+	<li>
+	<p>Матеріали, стійкі до високої температури<br />
+	Багато моделей виготовляються з тканин і синтетичних матеріалів, здатних витримувати підвищені температури. Це особливо важливо для військових і пожежників, які працюють у небезпечних умовах.</p>
+	</li>
+	<li>
+	<p>Маневреність і комфорт<br />
+	Тактичні рукавички забезпечують високу мобільність кисті, що дозволяє виконувати точні рухи &mdash; як при поводженні зі зброєю, так і при роботі з дрібними деталями. Навіть утеплені моделі залишаються комфортними.</p>
+	</li>
+	<li>
+	<p>Стійкість до зносу<br />
+	Якість матеріалів і міцна конструкція дозволяють рукавичкам служити довго без втрати властивостей, роблячи їх ідеальними для інтенсивного використання.</p>
+	</li>
+	<li>
+	<p>Універсальність<br />
+	Тактичні рукавички бувають різних варіантів: літні, зимові, жіночі, утеплені, з додатковим захистом або, навпаки, легкі для спекотної погоди. Це дає змогу обрати ідеальну модель для будь-яких умов.</p>
+	</li>
+</ol>
+
+<hr />
+<h4>Як вибрати тактичні рукавички?</h4>
+
+<p>Перед покупкою тактичних рукавичок зверніть увагу на кілька ключових аспектів. Ось основні поради:</p>
+
+<ol>
+	<li>
+	<p>Призначення<br />
+	Визначте, для чого вам потрібні рукавички. Наприклад, для роботи зі зброєю краще обрати моделі з тонкими, чутливими підсиленнями для максимальної точності. Якщо ж шукаєте рукавички на зиму &mdash; обирайте утеплені варіанти.</p>
+	</li>
+	<li>
+	<p>Матеріали<br />
+	Обирайте вироби з якісних матеріалів. Найкращими опціями є натуральна шкіра, міцний нейлон та сучасні синтетичні тканини з вогнетривкими властивостями.</p>
+	</li>
+	<li>
+	<p>Розмір<br />
+	Вкрай важливо підібрати правильний розмір. Рукавички повинні щільно прилягати, але не обмежувати рухів. Неправильно підібраний розмір може знизити ефективність і спричинити дискомфорт.</p>
+	</li>
+	<li>
+	<p>Сезонність<br />
+	Для літа підходять легкі моделі з вентиляцією, які захищають від подряпин та перегріву. Для зими обирайте утеплені рукавички, які не дають рукам охолонути.</p>
+	</li>
+	<li>
+	<p>Конструктивні особливості<br />
+	Зверніть увагу на додаткові елементи: підсилення фаланг, антиковзкі вставки чи водовідштовхувальні покриття. Ці деталі значно підвищують функціональність.</p>
+	</li>
+	<li>
+	<p>Бюджет та акції<br />
+	Інтернет-магазини <a href="https://messer.com.ua/odyag/rukavychky/">https://messer.com.ua/odyag/rukavychky/</a> часто пропонують знижки на тактичні рукавички. Це чудова нагода купити якісний виріб за вигіднішою ціною. Перед покупкою обов&rsquo;язково порівняйте ціни та умови доставки.</p>
+	</li>
+</ol>
+
+<hr />
+<h4>Основні варіанти тактичних рукавичок</h4>
+
+<p>На ринку представлено багато версій тактичних рукавичок. Головні категорії:</p>
+
+<ol>
+	<li>
+	<p>Утеплені зимові рукавички<br />
+	Ідеальний вибір для холодної пори року. Забезпечують тепло, захист і комфорт навіть при низьких температурах. Часто використовуються військовими та любителями зимових видів спорту.</p>
+	</li>
+	<li>
+	<p>Літні рукавички<br />
+	Легкі, дихаючі матеріали дозволяють комфортно працювати навіть у спеку. Захищають руки від подряпин, опіків сонцем та інших ушкоджень.</p>
+	</li>
+	<li>
+	<p>Жіночі рукавички<br />
+	Розроблені з урахуванням анатомії жіночої кисті. Забезпечують ідеальну посадку та не поступаються якістю чоловічим моделям.</p>
+	</li>
+	<li>
+	<p>Універсальні моделі<br />
+	Підходять для будь-якого сезону &mdash; можуть використовуватися як влітку, так і взимку. Поєднують у собі найкращі характеристики тактичного спорядження.</p>
+	</li>
+</ol>
+
+<hr />
+<h4>Де купити тактичні рукавички?</h4>
+
+<p>Найзручніше придбати тактичні рукавички в інтернет-магазині. Тут доступний широкий каталог моделей, можна порівняти характеристики, прочитати відгуки та скористатися акційними пропозиціями. Багато сайтів також вказують адреси офлайн-точок, де можна приміряти рукавички перед покупкою.</p>
+
+<hr />
+<h4>Чому варто обрати інтернет-магазин?</h4>
+
+<ul>
+	<li>
+	<p>Широкий вибір: у каталогах є літні й зимові, жіночі та універсальні моделі.</p>
+	</li>
+	<li>
+	<p>Зручність і економія часу: не потрібно витрачати години на пошуки фізичного магазину.</p>
+	</li>
+	<li>
+	<p>Вигідні пропозиції: регулярні акції та розпродажі дозволяють купити якісний товар за зниженою ціною.</p>
+	</li>
+	<li>
+	<p>Детальна інформація: кожен товар супроводжується описом, артикулом, розмірами та ключовими характеристиками.</p>
+	</li>
+</ul>
+
+<hr />
+<h4>Висновок</h4>
+
+<p>Тактичні рукавички &mdash; незамінне спорядження для тих, хто цінує комфорт, захист і функціональність. Будь ви військовий, спортсмен, мисливець чи просто любитель активного відпочинку &mdash; ці рукавички стануть надійним супутником у будь-яких умовах. Головне &mdash; правильно обрати модель за сезоном, матеріалами, конструкційними особливостями та вашими потребами. Не відкладай вибір на потім &mdash; переглянь онлайн-каталоги вже сьогодні й знайди ідеальну пару для себе!</p>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-shield-check-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Посилений захист</h3>
+                    <p class="text-gray-600">Спеціальні вставки з композитних матеріалів захищають суглоби та кісточки від ударів та пошкоджень.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-fingerprint-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Тактильна чутливість</h3>
+                    <p class="text-gray-600">Спеціальна конструкція дозволяє зберігати високу чутливість пальців для точних маніпуляцій.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-water-flash-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Водонепроникність</h3>
+                    <p class="text-gray-600">Спеціальна мембрана захищає руки від вологи, зберігаючи при цьому повітропроникність.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-temperature-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Терморегуляція</h3>
+                    <p class="text-gray-600">Зберігають тепло в холодну погоду та забезпечують вентиляцію в спеку завдяки інноваційним матеріалам.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-smartphone-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Сенсорний екран</h3>
+                    <p class="text-gray-600">Спеціальні вставки на кінчиках пальців дозволяють користуватися сенсорними екранами без зняття рукавичок.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-hammer-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Зносостійкість</h3>
+                    <p class="text-gray-600">Виготовлені з високоякісних матеріалів, які витримують інтенсивне використання в екстремальних умовах.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Детальний опис продукту</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-2xl font-semibold mb-6">Характеристики тактичних рукавичок</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-primary text-white rounded-full">
+                                    <i class="ri-file-list-3-line"></i>
+                                </div>
+                                Матеріали
+                            </h4>
+                            <ul class="space-y-2 pl-10">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Зовнішній шар: Кевлар, високоміцний нейлон</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Внутрішній шар: М'яка мікрофібра з вологовідвідними властивостями</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Захисні вставки: Композитний матеріал з амортизуючими властивостями</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Долонна частина: Протиковзкий матеріал з підвищеною зносостійкістю</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-primary text-white rounded-full">
+                                    <i class="ri-tools-line"></i>
+                                </div>
+                                Функціональність
+                            </h4>
+                            <ul class="space-y-2 pl-10">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Регульована застібка на зап'ясті для надійної фіксації</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Спеціальні вставки для роботи з сенсорними екранами</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Анатомічний крій для максимального комфорту</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span>Посилені шви для підвищеної міцності</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-primary text-white rounded-full">
+                                    <i class="ri-ruler-line"></i>
+                                </div>
+                                Розмірна сітка
+                            </h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white border border-gray-200 !rounded-lg">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-2 px-4 border-b text-left">Розмір</th>
+                                            <th class="py-2 px-4 border-b text-left">Обхват долоні (см)</th>
+                                            <th class="py-2 px-4 border-b text-left">Довжина (см)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">S</td>
+                                            <td class="py-2 px-4 border-b">18-20</td>
+                                            <td class="py-2 px-4 border-b">17-18</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">M</td>
+                                            <td class="py-2 px-4 border-b">20-22</td>
+                                            <td class="py-2 px-4 border-b">18-19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">L</td>
+                                            <td class="py-2 px-4 border-b">22-24</td>
+                                            <td class="py-2 px-4 border-b">19-20</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">XL</td>
+                                            <td class="py-2 px-4 border-b">24-26</td>
+                                            <td class="py-2 px-4 border-b">20-21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4">XXL</td>
+                                            <td class="py-2 px-4">26-28</td>
+                                            <td class="py-2 px-4">21-22</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=tactical%20military%20gloves%20from%20different%20angles%20showing%20details%2C%20premium%20quality%20tactical%20gloves%20with%20reinforced%20knuckles%20and%20palm%2C%20professional%20product%20photography%20on%20a%20dark%20background%2C%20showing%20texture%20and%20materials%2C%20high-resolution%20detailed%20image&width=800&height=500&seq=2&orientation=landscape" alt="Тактичні рукавички" class="w-full h-full object-cover object-top">
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <div class="h-24 rounded-lg overflow-hidden shadow">
+                            <img src="https://readdy.ai/api/search-image?query=tactical%20gloves%20close-up%20of%20reinforced%20knuckle%20protection%2C%20premium%20quality%20tactical%20gloves%20detail%2C%20professional%20product%20photography%20on%20dark%20background&width=200&height=100&seq=3&orientation=landscape" alt="Захист суглобів" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="h-24 rounded-lg overflow-hidden shadow">
+                            <img src="https://readdy.ai/api/search-image?query=tactical%20gloves%20palm%20view%20showing%20grip%20texture%2C%20premium%20quality%20tactical%20gloves%20detail%2C%20professional%20product%20photography%20on%20dark%20background&width=200&height=100&seq=4&orientation=landscape" alt="Долонна частина" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="h-24 rounded-lg overflow-hidden shadow">
+                            <img src="https://readdy.ai/api/search-image?query=tactical%20gloves%20wrist%20closure%20system%2C%20premium%20quality%20tactical%20gloves%20detail%2C%20professional%20product%20photography%20on%20dark%20background&width=200&height=100&seq=5&orientation=landscape" alt="Система фіксації" class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Відгуки наших клієнтів</h2>
+            
+            <div class="relative" id="reviews-carousel">
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-300" id="reviews-slider">
+                        <!-- Review 1 -->
+                        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                                        <i class="ri-user-line ri-lg text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Олександр Петренко</h4>
+                                        <p class="text-sm text-gray-500">Військовослужбовець</p>
+                                    </div>
+                                </div>
+                                <div class="flex text-yellow-400 mb-3">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <p class="text-gray-600 mb-2">Використовую ці рукавички вже понад півроку в зоні бойових дій. Відмінно захищають руки, зручні в носінні навіть протягом тривалого часу. Особливо ціную захист суглобів та міцність матеріалів.</p>
+                                <p class="text-sm text-gray-500">15 травня 2025</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                                        <i class="ri-user-line ri-lg text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Марина Коваленко</h4>
+                                        <p class="text-sm text-gray-500">Інструктор з тактичної підготовки</p>
+                                    </div>
+                                </div>
+                                <div class="flex text-yellow-400 mb-3">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                                <p class="text-gray-600 mb-2">Рекомендую ці рукавички своїм курсантам. Відмінне співвідношення ціни та якості. Єдиний мінус - трохи довго сохнуть після намокання, але в цілому дуже задоволена.</p>
+                                <p class="text-sm text-gray-500">3 травня 2025</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 3 -->
+                        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                                        <i class="ri-user-line ri-lg text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Віталій Мельник</h4>
+                                        <p class="text-sm text-gray-500">Страйкболіст</p>
+                                    </div>
+                                </div>
+                                <div class="flex text-yellow-400 mb-3">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                </div>
+                                <p class="text-gray-600 mb-2">Використовую на страйкбольних іграх. Зручні, не натирають, дають хорошу тактильну чутливість. Після кількох місяців активного використання виглядають як нові. Рекомендую!</p>
+                                <p class="text-sm text-gray-500">20 квітня 2025</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 4 -->
+                        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                                        <i class="ri-user-line ri-lg text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Ігор Савченко</h4>
+                                        <p class="text-sm text-gray-500">Мисливець</p>
+                                    </div>
+                                </div>
+                                <div class="flex text-yellow-400 mb-3">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <p class="text-gray-600 mb-2">Купив для полювання та туризму. Відмінно захищають від холоду, при цьому зберігають чутливість пальців. Особливо подобається якість матеріалів та швів. Однозначно варті своїх грошей.</p>
+                                <p class="text-sm text-gray-500">10 квітня 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 hidden md:block" id="prev-review">
+                    <i class="ri-arrow-left-s-line ri-lg"></i>
+                </button>
+                
+                <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 hidden md:block" id="next-review">
+                    <i class="ri-arrow-right-s-line ri-lg"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center mt-6 md:hidden">
+                <button class="mx-2 bg-white p-2 rounded-full shadow-md" id="prev-review-mobile">
+                    <i class="ri-arrow-left-s-line ri-lg"></i>
+                </button>
+                
+                <button class="mx-2 bg-white p-2 rounded-full shadow-md" id="next-review-mobile">
+                    <i class="ri-arrow-right-s-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Order Form Section -->
+    <section class="py-16 bg-gray-50" id="order">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Замовити тактичні рукавички</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Оберіть модель</h3>
+                            <div class="space-y-3">
+                                <label class="custom-radio block">
+                                    <input type="radio" name="model" value="tactical-pro" checked>
+                                    <span class="radio-mark"></span>
+                                    <span class="ml-2">Tactical Pro (1,499 грн)</span>
+                                </label>
+                                <label class="custom-radio block">
+                                    <input type="radio" name="model" value="tactical-elite">
+                                    <span class="radio-mark"></span>
+                                    <span class="ml-2">Tactical Elite (1,899 грн)</span>
+                                </label>
+                                <label class="custom-radio block">
+                                    <input type="radio" name="model" value="tactical-winter">
+                                    <span class="radio-mark"></span>
+                                    <span class="ml-2">Tactical Winter (1,699 грн)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Оберіть розмір</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="S" class="hidden">
+                                    <span class="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer inline-block hover:bg-gray-50 size-radio">S</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="M" class="hidden" checked>
+                                    <span class="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer inline-block hover:bg-gray-50 size-radio">M</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="L" class="hidden">
+                                    <span class="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer inline-block hover:bg-gray-50 size-radio">L</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="XL" class="hidden">
+                                    <span class="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer inline-block hover:bg-gray-50 size-radio">XL</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="XXL" class="hidden">
+                                    <span class="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer inline-block hover:bg-gray-50 size-radio">XXL</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Оберіть колір</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="black" class="hidden" checked>
+                                    <span class="w-8 h-8 rounded-full inline-block cursor-pointer border-2 border-transparent color-radio" style="background-color: #000000;"></span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="olive" class="hidden">
+                                    <span class="w-8 h-8 rounded-full inline-block cursor-pointer border-2 border-transparent color-radio" style="background-color: #556B2F;"></span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="coyote" class="hidden">
+                                    <span class="w-8 h-8 rounded-full inline-block cursor-pointer border-2 border-transparent color-radio" style="background-color: #A0522D;"></span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="multicam" class="hidden">
+                                    <span class="w-8 h-8 rounded-full inline-block cursor-pointer border-2 border-transparent color-radio" style="background: linear-gradient(45deg, #7B6F59, #A59478, #D8C09D, #4D5D35);"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Кількість</h3>
+                            <div class="flex items-center">
+                                <button class="w-10 h-10 bg-gray-200 rounded-l-lg flex items-center justify-center" id="decrease-quantity">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" min="1" value="1" class="w-16 h-10 text-center border-y border-gray-200 focus:outline-none" id="quantity">
+                                <button class="w-10 h-10 bg-gray-200 rounded-r-lg flex items-center justify-center" id="increase-quantity">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form id="order-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Ваше ім'я*</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Номер телефону*</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="city" class="block text-gray-700 mb-2">Місто*</label>
+                                <input type="text" id="city" name="city" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="delivery" class="block text-gray-700 mb-2">Спосіб доставки*</label>
+                                <div class="relative">
+                                    <select id="delivery" name="delivery" required class="w-full px-4 py-2 border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary pr-8">
+                                        <option value="">Оберіть спосіб доставки</option>
+                                        <option value="nova-poshta">Нова Пошта</option>
+                                        <option value="ukrposhta">Укрпошта</option>
+                                        <option value="courier">Кур'єр (тільки Київ)</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="custom-checkbox block">
+                                    <input type="checkbox" name="agree" required>
+                                    <span class="checkmark"></span>
+                                    <span class="text-sm text-gray-600">Я погоджуюсь з умовами оферти та даю згоду на обробку персональних даних*</span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button text-lg font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
+                                    Оформити замовлення
+                                </button>
+                                <p class="text-sm text-gray-500 mt-2 text-center">* - обов'язкові поля</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Наші гарантії</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-shield-check-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Гарантія якості</h3>
+                    <p class="text-gray-600">Кожна пара рукавичок проходить суворий контроль якості перед відправкою клієнту.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-exchange-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">14 днів на повернення</h3>
+                    <p class="text-gray-600">Якщо товар не підійшов, ви можете повернути його протягом 14 днів з моменту отримання.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-truck-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Швидка доставка</h3>
+                    <p class="text-gray-600">Відправляємо замовлення в день оформлення при замовленні до 15:00.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-customer-service-2-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Підтримка 24/7</h3>
+                    <p class="text-gray-600">Наші менеджери завжди готові відповісти на ваші запитання та допомогти з вибором.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-semibold mb-6">Сертифікати якості</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="w-32 h-32 bg-gray-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="ri-award-line ri-3x text-primary mb-2"></i>
+                            <p class="text-sm font-medium">ISO 9001:2015</p>
+                        </div>
+                    </div>
+                    <div class="w-32 h-32 bg-gray-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="ri-verified-badge-line ri-3x text-primary mb-2"></i>
+                            <p class="text-sm font-medium">ДСТУ EN 388</p>
+                        </div>
+                    </div>
+                    <div class="w-32 h-32 bg-gray-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="ri-medal-line ri-3x text-primary mb-2"></i>
+                            <p class="text-sm font-medium">CE Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Контактна інформація</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>м. Київ, вул. Хрещатик, 15, офіс 305</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span>+38 (099) 123-45-67</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span>info@tactical-gloves.ua</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>Пн-Пт: 9:00-21:00, Сб-Нд: 10:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Інформація</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">Про нас</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Доставка і оплата</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Гарантія та повернення</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Політика конфіденційності</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Договір оферти</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Слідкуйте за нами</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mb-4">Способи оплати</h3>
+                    <div class="flex space-x-4">
+                        <div class="w-12 h-8 bg-white rounded flex items-center justify-center">
+                            <i class="ri-visa-fill ri-lg text-blue-800"></i>
+                        </div>
+                        <div class="w-12 h-8 bg-white rounded flex items-center justify-center">
+                            <i class="ri-mastercard-fill ri-lg text-red-500"></i>
+                        </div>
+                        <div class="w-12 h-8 bg-white rounded flex items-center justify-center">
+                            <i class="ri-bank-card-line ri-lg text-gray-800"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-6 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2025 Тактичні рукавички. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <button id="scroll-to-top" class="w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300">
+            <i class="ri-arrow-up-line ri-lg"></i>
+        </button>
+        
+        <div class="w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center cursor-pointer" id="messenger-toggle">
+            <i class="ri-message-3-line ri-lg"></i>
+        </div>
+    </div>
+    
+    <!-- Messenger Widget -->
+    <div class="fixed bottom-24 right-6 bg-white rounded-lg shadow-xl w-72 z-50 hidden" id="messenger-widget">
+        <div class="bg-primary text-white p-4 rounded-t-lg flex justify-between items-center">
+            <h3 class="font-semibold">Напишіть нам</h3>
+            <button id="close-messenger" class="w-6 h-6 flex items-center justify-center">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <div class="p-4">
+            <div class="flex space-x-3 mb-4">
+                <a href="#" class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full">
+                    <i class="ri-messenger-line ri-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full">
+                    <i class="ri-whatsapp-line ri-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center bg-blue-400 text-white rounded-full">
+                    <i class="ri-telegram-line ri-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full">
+                    <i class="ri-viber-line ri-lg"></i>
+                </a>
+            </div>
+            <p class="text-sm text-gray-600 text-center">Оберіть зручний для вас месенджер</p>
+        </div>
+    </div>
+    
+    <!-- Callback Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="callback-modal">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 relative">
+            <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center" id="close-callback">
+                <i class="ri-close-line ri-lg"></i>
+            </button>
+            
+            <h3 class="text-2xl font-semibold mb-6">Замовити дзвінок</h3>
+            
+            <form id="callback-form">
+                <div class="mb-4">
+                    <label for="callback-name" class="block text-gray-700 mb-2">Ваше ім'я*</label>
+                    <input type="text" id="callback-name" name="callback-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="callback-phone" class="block text-gray-700 mb-2">Номер телефону*</label>
+                    <input type="tel" id="callback-phone" name="callback-phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button text-lg font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
+                    Замовити дзвінок
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+    <script id="timer-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateTimer() {
+                const now = new Date();
+                const endOfDay = new Date();
+                endOfDay.setHours(23, 59, 59, 999);
+                
+                const timeLeft = endOfDay - now;
+                
+                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        });
+    </script>
+
+    <script id="reviews-carousel-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('reviews-slider');
+            const prevButton = document.getElementById('prev-review');
+            const nextButton = document.getElementById('next-review');
+            const prevButtonMobile = document.getElementById('prev-review-mobile');
+            const nextButtonMobile = document.getElementById('next-review-mobile');
+            
+            let currentSlide = 0;
+            let slideWidth = 100;
+            let slidesToShow = 1;
+            
+            function updateSlidesToShow() {
+                if (window.innerWidth >= 1024) {
+                    slidesToShow = 3;
+                } else if (window.innerWidth >= 768) {
+                    slidesToShow = 2;
+                } else {
+                    slidesToShow = 1;
+                }
+                updateSlider();
+            }
+            
+            function updateSlider() {
+                slideWidth = 100 / slidesToShow;
+                slider.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+                
+                const slides = slider.querySelectorAll('div[class^="min-w-"]');
+                slides.forEach(slide => {
+                    slide.style.minWidth = `${slideWidth}%`;
+                });
+            }
+            
+            function nextSlide() {
+                const slides = slider.querySelectorAll('div[class^="min-w-"]');
+                const maxSlide = slides.length - slidesToShow;
+                
+                if (currentSlide < maxSlide) {
+                    currentSlide++;
+                    updateSlider();
+                }
+            }
+            
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlider();
+                }
+            }
+            
+            updateSlidesToShow();
+            window.addEventListener('resize', updateSlidesToShow);
+            
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+            prevButtonMobile.addEventListener('click', prevSlide);
+            nextButtonMobile.addEventListener('click', nextSlide);
+        });
+    </script>
+
+    <script id="form-controls-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Size selection
+            const sizeOptions = document.querySelectorAll('.size-option input');
+            const sizeLabels = document.querySelectorAll('.size-radio');
+            
+            sizeOptions.forEach((option, index) => {
+                if (option.checked) {
+                    sizeLabels[index].classList.add('bg-primary', 'text-white', 'border-primary');
+                }
+                
+                option.addEventListener('change', function() {
+                    sizeLabels.forEach(label => {
+                        label.classList.remove('bg-primary', 'text-white', 'border-primary');
+                    });
+                    
+                    if (this.checked) {
+                        sizeLabels[index].classList.add('bg-primary', 'text-white', 'border-primary');
+                    }
+                });
+            });
+            
+            // Color selection
+            const colorOptions = document.querySelectorAll('.color-option input');
+            const colorLabels = document.querySelectorAll('.color-radio');
+            
+            colorOptions.forEach((option, index) => {
+                if (option.checked) {
+                    colorLabels[index].classList.add('border-primary');
+                }
+                
+                option.addEventListener('change', function() {
+                    colorLabels.forEach(label => {
+                        label.classList.remove('border-primary');
+                    });
+                    
+                    if (this.checked) {
+                        colorLabels[index].classList.add('border-primary');
+                    }
+                });
+            });
+            
+            // Quantity controls
+            const quantityInput = document.getElementById('quantity');
+            const decreaseButton = document.getElementById('decrease-quantity');
+            const increaseButton = document.getElementById('increase-quantity');
+            
+            decreaseButton.addEventListener('click', function() {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+            
+            increaseButton.addEventListener('click', function() {
+                const currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+            });
+            
+            // Order form submission
+            const orderForm = document.getElementById('order-form');
+            
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Дякуємо за замовлення! Наш менеджер зв\'яжеться з вами найближчим часом.');
+                orderForm.reset();
+            });
+        });
+    </script>
+
+    <script id="floating-elements-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll to top button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopButton.classList.remove('opacity-0');
+                } else {
+                    scrollToTopButton.classList.add('opacity-0');
+                }
+            });
+            
+            scrollToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Messenger widget
+            const messengerToggle = document.getElementById('messenger-toggle');
+            const messengerWidget = document.getElementById('messenger-widget');
+            const closeMessenger = document.getElementById('close-messenger');
+            
+            messengerToggle.addEventListener('click', function() {
+                messengerWidget.classList.toggle('hidden');
+            });
+            
+            closeMessenger.addEventListener('click', function() {
+                messengerWidget.classList.add('hidden');
+            });
+            
+            // Callback modal
+            const callbackButtons = document.querySelectorAll('button:contains("Замовити дзвінок")');
+            const callbackModal = document.getElementById('callback-modal');
+            const closeCallback = document.getElementById('close-callback');
+            const callbackForm = document.getElementById('callback-form');
+            
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.trim() === 'Замовити дзвінок') {
+                    button.addEventListener('click', function() {
+                        callbackModal.classList.remove('hidden');
+                    });
+                }
+            });
+            
+            closeCallback.addEventListener('click', function() {
+                callbackModal.classList.add('hidden');
+            });
+            
+            callbackModal.addEventListener('click', function(e) {
+                if (e.target === callbackModal) {
+                    callbackModal.classList.add('hidden');
+                }
+            });
+            
+            callbackForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Дякуємо! Ми зателефонуємо вам найближчим часом.');
+                callbackForm.reset();
+                callbackModal.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
